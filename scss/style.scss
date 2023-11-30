@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@import "./partials/header";
+@import "./partials/main";
+@import "./partials/footer";
+@import "./mixins/mixins.scss";
+
+
+h1{
+    @include h1;
+}
+
+h2{
+    @include h2;
+}
