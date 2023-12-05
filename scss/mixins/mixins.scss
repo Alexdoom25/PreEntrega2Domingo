@@ -34,6 +34,12 @@ $titulo3:1.5rem;
     text-align: justify;
     padding: 1rem;
 }
+@mixin texto-noticia{
+    font-family: $tipografia;
+    font-size:$texto3;
+    text-align: justify;
+    padding: 1rem;
+}
 @mixin videos{
     width: 90%;
     height: 460px;
@@ -48,9 +54,9 @@ $titulo3:1.5rem;
     text-align: justify;
     padding: 16px;
 }
-/* @mixin texto-tablet{
-    font-family: $tipografia;
-    font-size:$texto3;
-    text-align: justify;
-    padding: 1rem;
-} */
+@mixin img-noticia{
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border-radius: 50px;
+}
