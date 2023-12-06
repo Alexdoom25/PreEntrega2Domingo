@@ -3,6 +3,7 @@ $color-fondo-videos:rgb(63, 82, 164);
 $ancho-img:650px;
 $alto-img:500px;
 @import "../mixins/mixins.scss";
+/* contenido principal pagina inicio */
 main{
     background-color: $color-fondo;
     .principal{
@@ -16,21 +17,39 @@ main{
         }
         p{
             @include texto-principal;
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
 }
-section{
-    .secundario{
-        background-color:#F4DFB6; 
-        display: flex;
-        padding: 20px;
+.tarjetas-home{
+    @include tarjetas-encabezado;
+    .tarjeta-home{
+        background-color: #F4DFB6;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 20px;
+        transition: box-shadow 0.3s ease-in-out;
+        &:hover{
+            box-shadow: 0 8px 10px rgba(31, 1, 1, 0.2);
+        }
         img{
-            width: 250px;
+            width: 100%;
             height: 250px;
+            padding: 3px;
             border-radius: 50px;
         }
-        h3{
-            @include h3;
+        a{
+            @include enlace;
+            display: grid;
+            grid-row: 1/2;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        p{
+            @include texto-secundario;
+            font-size: 1rem;
         }
     }
 }
@@ -63,6 +82,7 @@ aside{
         }
     }
 }
+/* adaptación dispositivos moviles */
 @media(max-width: 360px){
     
     main{
@@ -76,9 +96,8 @@ aside{
             }
         }
     }
-    .secundario{
-        flex-direction: column;
-        align-items: center;
+    .tarjetas-home{
+        grid-template-columns: repeat(1,1fr);
     }
     .secvideo{
         flex-direction:column;

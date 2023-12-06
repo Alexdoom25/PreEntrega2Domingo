@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header>
@@ -18,54 +20,60 @@
             <a href="./pages/Cine.html">Cine</a>
         </nav>
     </header>
-    <h1>Bievenido a The Old Vinilo</h1>
+    <h1 class="animate__animated animate__pulse">Bievenido a The Old Vinilo</h1>
     <main>
         <section>
             <div class="principal">
-                <img src="./media/Huracan.jpg" alt="llegada huracan">
-                <p>El panorama desolador que encuentran los primeros turistas que visitan Acapulco tras el paso del devastador huracán Otis
-                </p>
+                <img src="./media/Huracan.jpg"data-aos="fade-right" alt="llegada huracan">
+                <p data-aos="fade-left">El panorama desolador que encuentran los primeros turistas que visitan Acapulco tras el paso del devastador huracán Otis
+                </>
             </div>
         </section>
         <h2>Noticias</h2>
-        <section>
-            <div class="secundario">
-                <img src="./media/concierto1.jpeg"" alt="cartel concierto">
-                <h3>Tu proximo concierto</h3>
-
-                <img src="./media/cantante.jpg" alt="cantante Jazz">
-                <h3>Cantante sufre accidente</h3>
-
-                <img src="./media/pelicula1.jpeg" alt="pelicula intensamente">
-                <h3>Todo listo para el estreno</h3>
+        <section class="tarjetas-home">
+            <div class="tarjeta-home"data-aos="flip-left">
+                <img src="/media/cartel1.webp" alt="Festival Tropico">
+                <a href="#">Listo para el Festival Tropico, checa el cartel</a>
+            </div>
+            <div class="tarjeta-home"data-aos="flip-left">
+                <img src="/media/cartel5.webp" alt="Festival Tropico">
+                <a href="#">Listo para el Festival Tropico, checa el cartel</a>
+            </div>
+            <div class="tarjeta-home"data-aos="flip-left">
+                <img src="/media/cartel6.webp" alt="Festival Tropico">
+                <a href="#">Listo para el Festival Tropico, checa el cartel</a>
+            </div>
+            <div class="tarjeta-home"data-aos="flip-left">
+                <img src="/media/cartel7.webp" alt="Festival Tropico">
+                <a href="#">Listo para el Festival Tropico, checa el cartel</a>
             </div>
         </section>
         <h2>Videos</h2>
         <section class="secvideo">
-            <div>
-                <iframe src="https://www.youtube.com/embed/B_JFZuTZI0g" frameborder="0" ></iframe>
+            <div  data-aos="fade-right">
+                <iframe src="https://www.youtube.com/embed/ZtuFgnxQMrA" frameborder="0" ></iframe>
                 <h3>Mira este trailer</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus pariatur asperiores ratione, vero quam impedit numquam amet 
-                    tempora nostrum reiciendis placeat necessitatibus eaque provident assumenda exercitationem illum animi similique!</p>
+                <p>Mira el nuevo trailer de la nueva pelicula de transformers, la cual se espera se estrene a finales de este año, no te la pierdas
+                    ¡checa el primer vistazo! </p>
           
                 <iframe src="https://www.youtube.com/embed/sg2jlO2K8r0" frameborder="0" ></iframe>
                 <h3>Concierto de Metallica desde California</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus pariatur asperiores ratione, vero quam impedit numquam amet 
-                    tempora nostrum reiciendis placeat necessitatibus eaque provident assumenda exercitationem illum animi similique!</p>
+                <p>El concierto se celebrará en Los Ángeles, CA., en concreto, el día viernes 25 y domingo 27 de agosto de 2023 en el famoso estadio SoFi, 
+                    sede de los equipos Los Angeles Rams y los Angeles Chargers.</p>
            
                 <iframe src="https://www.youtube.com/embed/kcBKZYM3hkw" frameborder="0" ></iframe>
-                <h3>Mira este trailer</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus pariatur asperiores ratione, vero quam impedit numquam amet 
-                    tempora nostrum reiciendis placeat necessitatibus eaque provident assumenda exercitationem illum animi similique!</p>
+                <h3>Se intensifica huracan ¡Toma Precauciones!</h3>
+                <p>El huracán Otis deja al menos 45 muertos y grandes destrozos a su paso por la ciudad de Acapulco y el estado mexicano de Guerrero.</p>
             
-                <iframe src="https://www.youtube.com/embed/WGU_4-5RaxU" frameborder="0" ></iframe>
+                <iframe src="https://www.youtube.com/embed/eVTXPUF4Oz4" frameborder="0" ></iframe>
                 <h3>Escucha este clásico</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus pariatur asperiores ratione, vero quam impedit numquam amet 
-                    tempora nostrum reiciendis placeat necessitatibus eaque provident assumenda exercitationem illum animi similique!</p>
+                <p>A unos años de que el voalista falleciera esta cancion sigue encabezando las principales lista de reproducción
+                    y por ello te lo dejamos aquí para que una vez mas la puedas escuchar.
+                </p>
             </div>
             <aside>
                 <ul>
-                    <h2 class="">Lo mas destacado</h2>
+                    <h2>Lo mas destacado</h2>
                     <li>
                         <h3>Al espacio</h3>
                         <img src="./media/cohete.jpg"class="img-propia" alt="Cohete despegando">
@@ -107,5 +115,9 @@
             <a href="#">Tiktok</a>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

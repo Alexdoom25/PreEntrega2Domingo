@@ -60,3 +60,36 @@ $titulo3:1.5rem;
     padding: 3px;
     border-radius: 50px;
 }
+@mixin enlace{
+    text-decoration: none;
+    color: black;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+@mixin centrado{
+    text-align: center;
+}
+@mixin tarjeta{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    border-bottom: 1px solid rgb(204, 198, 198);
+    padding: 5px;
+    &:last-of-type{
+        border: 0;
+    }
+}
+@mixin tarjeta-movil{
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+    border-bottom: 1px solid rgb(204, 198, 198);
+    padding: 5px;
+    &:last-of-type{
+        border: 0;
+    }
+}
+@mixin tarjetas-encabezado{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
