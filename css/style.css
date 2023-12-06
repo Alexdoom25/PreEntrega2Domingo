@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 header img {
   width: 100%;
   height: 400px;
@@ -54,6 +58,7 @@ main .principal p {
   font-size: 2rem;
   padding: 5rem;
   text-align: justify;
+  padding: 50px;
 }
 main .principal p:hover {
   text-decoration: underline;
@@ -124,7 +129,7 @@ main .principal p:hover {
 aside {
   color: black;
   background-color: #D6D46D;
-  width: 100%;
+  width: 45%;
 }
 aside li {
   list-style: none;
@@ -132,17 +137,43 @@ aside li {
 aside li img {
   width: 250px;
   height: 250px;
-  padding: 5px;
+  padding-left: 10px;
   border-radius: 50px;
 }
 
 /* adaptación dispositivos moviles */
+@media (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+  main .principal {
+    flex-direction: column;
+  }
+  main .principal img {
+    width: 100%;
+    padding: 0;
+  }
+  main .principal p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 16px;
+  }
+  .secundario {
+    flex-direction: column;
+    align-items: center;
+  }
+  aside li img {
+    padding: 5px;
+  }
+}
 @media (max-width: 360px) {
   main .principal {
     flex-direction: column;
   }
   main .principal img {
     width: 100%;
+    padding: 0;
   }
   main .principal p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -151,7 +182,7 @@ aside li img {
     padding: 16px;
   }
   .tarjetas-home {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1FR);
   }
   .secvideo {
     flex-direction: column;
@@ -165,29 +196,14 @@ aside li img {
     text-align: justify;
     padding: 16px;
   }
+  aside {
+    width: 100%;
+  }
   aside li {
     padding: 1.5rem;
   }
   aside li img {
     width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  main .principal {
-    flex-direction: column;
-  }
-  main .principal img {
-    width: 100%;
-  }
-  main .principal p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    text-align: justify;
-    padding: 16px;
-  }
-  .secundario {
-    flex-direction: column;
-    align-items: center;
   }
 }
 footer nav {
@@ -302,6 +318,12 @@ footer nav a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .contenido-noticias {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (max-width: 360px) {
   .contenido-noticias {
     flex-direction: column;
@@ -320,7 +342,10 @@ footer nav a:hover {
     border: 0;
   }
   .contenido-noticias ul .tarjeta p {
-    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 16px;
   }
   .contenido-noticias ul .tarjeta img {
     width: 100%;
@@ -363,6 +388,24 @@ section .img-propia {
   padding: 5px;
 }
 
+@media (max-width: 360px) {
+  section h2 {
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    padding: 10px;
+    text-align: center;
+  }
+  section .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section .img-propia {
+    width: 180px;
+    height: 250px;
+    padding: 10px;
+  }
+}
 /* contenido de la pagina de tecnologia */
 .tarjetas-tecno {
   display: grid;
@@ -403,6 +446,17 @@ section .img-propia {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .tarjetas-tecno {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 360px) {
+  .tarjetas-tecno {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /* contenido de la pagina de musica */
 .tarjetas-musica {
   display: grid;
@@ -443,6 +497,17 @@ section .img-propia {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .tarjetas-musica {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 360px) {
+  .tarjetas-musica {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /* estilos de pagina de cine */
 .tarjetas-cine {
   display: grid;
@@ -483,6 +548,17 @@ section .img-propia {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .tarjetas-cine {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 360px) {
+  .tarjetas-cine {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 h1 {
   text-align: center;
   font-size: 2.5rem;

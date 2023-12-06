@@ -34,9 +34,14 @@
     }
     
 }
-@media(max-width: 360px){
-
-}
 @media(max-width: 768px){
-    
+    .tarjetas-musica{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width: 360px){
+    .tarjetas-musica{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
