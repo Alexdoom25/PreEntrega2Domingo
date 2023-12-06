@@ -305,47 +305,37 @@ footer nav a:hover {
 @media (max-width: 360px) {
   .contenido-noticias {
     flex-direction: column;
+    align-items: center;
   }
-  .contenido-noticias .tarjeta {
+  .contenido-noticias ul {
+    padding: 5px;
+  }
+  .contenido-noticias ul .tarjeta {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     border-bottom: 1px solid rgb(204, 198, 198);
     padding: 5px;
   }
-  .contenido-noticias .tarjeta:last-of-type {
+  .contenido-noticias ul .tarjeta:last-of-type {
     border: 0;
   }
-  .contenido-noticias .tarjeta h3 {
-    font-size: 1.5rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
-    padding: 1rem;
-    grid-column: 1/2;
+  .contenido-noticias ul .tarjeta p {
     padding: 0;
   }
-  .contenido-noticias .tarjeta p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    text-align: justify;
-    padding: 1rem;
-    grid-column: 1/3;
-  }
-  .contenido-noticias .tarjeta img {
-    width: 150px;
-    height: 150px;
-    padding: 3px;
-    border-radius: 50px;
+  .contenido-noticias ul .tarjeta img {
+    width: 100%;
+    height: 250px;
     grid-column: 1/2;
     grid-row: 2/2;
   }
-  .contenido-noticias .tarjeta a {
+  .contenido-noticias ul .tarjeta a {
     text-decoration: none;
     color: black;
   }
-  .contenido-noticias .tarjeta a:hover {
+  .contenido-noticias ul .tarjeta a:hover {
     text-decoration: underline;
   }
-  .contenido-noticias .tarjeta button {
+  .contenido-noticias ul .tarjeta button {
     grid-column: 1/2;
     width: 50%;
   }
